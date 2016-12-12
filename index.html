@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LD37</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body { margin: 0; background: black; overflow:hidden;}
+            canvas { width: 99%; height: 99%; border: none; background: black; overflow:hidden;}
+            .home {color: #fff;text-align: center; margin: 0 auto; font-size:1.2em;}
+            button{padding: 10; font-size:1.4em; margin: 10px; text-transform: uppercase;}
+            .win{display:none;}
+        </style>
+    </head>
+    <body>
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/three.min.js"></script>
+        <script src="dist/app.js"></script>
+        <div class="home">
+            <h1>Ludum Dare 37: One Room</h1>
+            <p>Use the arrow keys to navigate around the room.
+                <br/>Avoid getting stuck on walls.
+                <br/>Some walls move up and down in a repeated fashion.
+                <br/>There is a gem you must find somewhere hidden by the walls that mock you.
+                <br/>If you get stuck, just press F5 to restart the game.</p>
+            <p>Note: This is a poorly optimized WebGL game, so gliches may occur. It's <strong>highly</strong> recommended you play this in the Google Chrome browser.</p>
+            <button autofocus >Play</button>
+        </div>
+        <div class="win">
+            <h1>Ludum Dare 37: One Room</h1>
+            <p>Congatulations!</p>
+        </div>
+        <script>
+            (function(){
+                $("button").click(function(){
+                    $(".home").remove();
+                    window.bootstrap();
+                });
+            })();
+        </script>
+    </body>
+</html>
